@@ -7,15 +7,16 @@ javascript:(function(){
 		window.location.href = url;
 	}
 	// select size
-	$('#attr-size').val("4.0 Boys = 5.5 Women");
+	$('#attr-size').val("4.0 Boys = 5.5 Women").trigger('change');
 	// select quantity
-	$('#quantity-item').val("1");
+	$('#quantity-item').val("1").trigger('change');
 	// add to cart
-	var button = document.querySelector('a.product-content-form-add-to-bag.button.primary.add-to-bag-js');
-	button.click();
+	var addToCart = document.querySelector('a.product-content-form-add-to-bag.button.primary.add-to-bag-js');
+	addToCart.click();
+
 	// checkout
-	button = document.querySelector('a.mini-cart-action.button.primary');
-	button.click();
+	var cart = document.querySelector('a.mini-cart-action.button.primary');
+	cart.click();
 	console.log("bookmarklet finished");
 })();
 
