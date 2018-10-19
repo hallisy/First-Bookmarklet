@@ -20,7 +20,7 @@ javascript:(function(){
 	console.log("checkout");
 	$( document ).ajaxComplete(function(event, xhr, settings){
 		if ( settings.url === "https://www.vans.com/webapp/wcs/stores/servlet/VFAjaxGetMiniCartOrderView?storeId=10153&langId=-1&catalogId=10703&requesttype=ajax" ) {
-   		$( ".log" ).text( "Triggered ajaxComplete handler. The result is " + xhr.responseText );
+   		$( ".log" ).text( "Triggered ajaxComplete handler." );
 	});
 	var cart = document.querySelector('a.mini-cart-action.button.primary');
 	cart.click();
